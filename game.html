@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>משחק הקלדה עיוורת</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <h1>ברוכים הבאים</h1>
+      <p>הירשמו כדי להתחיל לשחק</p>
+      <form action="game.html" method="get">
+        
+        <label for="id">תעודת זהות</label>
+        <input type="text" id="id" name="id" required placeholder="הכנס ת.ז.">
+        
+        <label for="name">שם מלא</label>
+        <input type="text" id="name" name="name" required placeholder="הכנס שם">
+        <p id="p">יש להכניס 9 ספרות ומינימום אות אחת.</p>
+        <button type="submit" id="notDisplay" disabled>כניסה למשחק</button>
+      </form>
+    </div>
+  </div>
+  <script src="./js/jsGame.js" type="text/Javascript"></script>
+</body>
+</html>

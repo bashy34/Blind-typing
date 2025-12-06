@@ -1,0 +1,239 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #8e44ad, #3498db);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 40px;
+  direction: rtl;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.levels-container {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.levels-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ברירת מחדל: 4 עמודות */
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.level-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #2c3e50;
+  padding: 30px 0;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+.level-box:hover {
+  background-color: #ecf0f1;
+  transform: scale(1.05);
+}
+
+.game-description {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #2c3e50;
+  padding: 20px;
+  border-radius: 16px;
+  margin: 20px auto;
+  width: 95%;
+  box-sizing: border-box;
+  text-align: right;
+  line-height: 1.7;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.played {
+  background-color: #2c3e50;
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 0.5;
+}
+
+.played:hover {
+  background-color: #2c3e50;
+  transform: scale(1.00);
+  opacity: 0.5;
+}
+
+.link-score {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #2c3e50;
+  padding: 30px 0;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: 40px auto 0 auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.link-score:hover {
+  background-color: #ecf0f1;
+  transform: scale(1.05);
+}
+
+/* רווח בין כפתורי רדיו */
+.difficulty-selection label {
+  margin-left: 40px;
+  cursor: pointer;
+  color: #333;
+  user-select: none;
+  font-weight: 600;
+}
+
+/* עיצוב מסגרת בחירת קושי */
+.difficulty-selection {
+  border: 2px solid #6a5acd;
+  border-radius: 8px;
+  padding: 12px 16px;
+  max-width: 600px;
+  margin: 0 auto 200px auto;
+  background: #f5f5f5;
+  font-size: 1.2rem;
+  direction: rtl;
+}
+
+.difficulty-selection legend {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #4b0082;
+  padding: 0 8px;
+}
+
+.difficulty-selection input[type="radio"] {
+  margin-left: 8px;
+  cursor: pointer;
+  accent-color: #6a5acd;
+}
+
+.difficulty-selection label:hover {
+  color: #6a5acd;
+}
+
+/* כפתור עוגן לעבור לתחתית */
+.scroll-to-bottom {
+  display: inline-block;
+  background-color: #ffffffcc;
+  color: #2c3e50;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 70px;
+  margin-top: 70px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.scroll-to-bottom:hover {
+  transform: scale(1.05);
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+  .levels-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 90%;
+    gap: 16px;
+  }
+
+  .level-box {
+    padding: 25px 0;
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .levels-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    gap: 14px;
+  }
+
+  .level-box {
+    padding: 22px 0;
+    font-size: 17px;
+  }
+
+  .game-description {
+    font-size: 15px;
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .levels-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    gap: 12px;
+  }
+
+  .level-box {
+    padding: 20px 0;
+    font-size: 16px;
+  }
+
+  .game-description {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .levels-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .level-box {
+    padding: 18px 0;
+    font-size: 15px;
+  }
+
+  .game-description {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+}

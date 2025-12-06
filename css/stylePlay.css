@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #8e44ad, #3498db);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: center;
+  overflow-x: hidden;
+}
+
+/* .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  width: 90%;
+} */
+
+.game-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
+    /* הגבלת רוחב */
+  width: 95%;
+  font-size: 0;
+  margin: 0 auto;    /* מרכז אופקית */
+}
+
+
+.text-line {
+  font-size: 30px;
+  color: #2c3e50;
+  letter-spacing: 0.1rem;
+  
+}
+
+.big-letter {
+  font-size: 60px;
+  color: #8e44ad;
+  font-weight: bold;
+  
+}
+
+ /* רקע מטושטש */
+  #popup-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 9998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+
+
+  #popup-table {
+  background: white;
+  border: 2px solid #a084ca;
+  border-radius: 12px;
+  padding: 20px 15px 15px;
+  z-index: 9999;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 95vw; /* ✅ תופס עד 95% מהמסך */
+  text-align: center;
+  overflow-x: auto; /* ✅ במקרה וחרג */
+  box-sizing: border-box;
+}
+
+
+
+
+  table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+  table-layout: fixed; /* ✅ */
+  word-wrap: break-word; /* ✅ */
+}
+
+  th {
+    background-color: #a084ca;
+    color: white;
+    padding: 10px;
+  }
+
+  td {
+    background-color: #e3f2ff;
+    padding: 10px;
+    color: #333;
+    text-align: center;
+  }
+
+  /* כפתור קישור */
+  .link-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #aee2ff;
+    color: #4b0082;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+
+  .link-button:hover {
+    background-color: #92d2f5;
+  }
+
+  .red_border {
+    border: 10px solid #fa0202;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+
+ .image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  position: relative; /* כדי לאפשר תזוזה יחסית */
+}
+
+.top-large-image {
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  position: relative;
+  top: -10px; /* הזזה של 10 פיקסלים למעלה */
+}
+
+
+
+
+
+
+
+
+/* רספונסיביות לניידים */
+@media (max-width: 600px) {
+  .top-large-image {
+    max-width: 90vw; /* עד 90% מרוחב המסך */
+  }
+
+  .text-line {
+    font-size: 20px;
+  }
+
+  .big-letter {
+    font-size: 30px;
+    margin: 0 5px;
+  }
+
+  .game-box {
+    padding: 15px;
+    font-size: 0;
+  }
+}
+/* לניידים קטנים במיוחד עד 375 פיקסלים */
+@media (max-width: 375px) {
+  .top-large-image {
+    max-width: 95vw; /* עד 95% מרוחב המסך */
+  }
+  
+  th, td {
+    font-size: 0.75rem;
+    padding: 6px 4px;
+  }
+
+  .link-button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    display: block;
+    margin: 5px auto;
+    width: 90%;
+  }
+
+  #popup-table {
+    padding: 15px 10px;
+  }
+}
+

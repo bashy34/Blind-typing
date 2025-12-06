@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>משחק הקלדה</title>
+  <link rel="stylesheet" href="../css/stylePlay.css">
+</head>
+<body id="border">
+  <div>
+    <div class="image-container">
+      <img src="../pictures/צילום מסך 2025-07-02 005418.png" alt="תמונה גדולה מעל הקופסה" class="top-large-image">
+    </div>
+
+    <div class="game-box">
+      <span class="text-line before"></span>
+    </div>
+    <div id="popup-overlay">
+      <div id="popup-table">
+        <table>
+          <thead>
+            <tr>
+              <th>רמה</th>
+              <th>מהירות לשנייה</th>
+              <th>אחוז דיוק</th>
+              <th>ציון סופי</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="td-level"></td>
+              <td id="td-speed"></td>
+              <td id="td-accuracy">%</td>
+              <td id="td-mark"></td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="../html/score.html" class="link-button">טבלאת תוצאות</a>
+        <a class="link-button link-button-next">לרמה הבאה</a>
+      </div>
+    </div>
+  </div>
+  <!-- <audio controls>
+    <source src="../audio/puin_low.mp3" type="audio/mpeg" id="right">
+    הדפדפן שלך לא תומך באודיו.
+  </audio>
+  <audio controls>
+    <source src="../audio/error.mp3" type="audio/mpeg" id="error">
+    הדפדפן שלך לא תומך באודיו.
+  </audio> -->
+  <script src="../js/jsPlay.js" type="text/Javascript"></script>
+</body>
+</html>
